@@ -5,41 +5,247 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
+                <h1>Learning Assistance Community Portal</h1>
             </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
         </div>
     </section>
 }
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
+<div>
+    <div class="ContentPanelLeft">
+        <div class="LeftPanelListDivs">
+            <h3>New Clients:</h3>
+            <ol class="LeftPanelOrderedLists">
+                <li>Nick Pranger</li>
+                <li>Corey Sadosky</li>
+                <li>Tim Crawford</li>
+            </ol>
+        </div>
+        <div class="LeftPanelListDivs">
+            <h3>Active Clients:</h3>
+            <ol class="LeftPanelOrderedLists">
+                <li>Anthony DiMuzio</li>
+                <li>Chandler Wenninger</li>
+                <li>Nick Pranger</li>
+            </ol>
+        </div>
+        <div class="LeftPanelListDivs">
+            <h3>Active Tutors:</h3>
+            <ol class="LeftPanelOrderedLists">
+                <li>Corey Sadosky</li>
+                <li>Tim Crawford</li>
+                <li>Chandler Wenninger</li>
+            </ol>
+        </div>
+    </div>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
+    <div id="divActiveTutorDisplay" class="ContentPanelCenter" style="text-align:left;">
+        <table class="HorizontalAlignmentCenter">
+            <tr>
+                <td>
+                    <p>First Name:</p>
+                    <label ID="ATfirstName" runat="server" style="margin:10px;">John</label>
+                </td>
+                <td>
+                    <p>Last Name:</p>
+                    <label ID="ATLastName" runat="server" style="margin:10px;">Smith</label>
+                </td>
+                <td>
+                    <p>MI:</p>
+                    <label ID="ATMiddleInitial" runat="server" style="margin:10px;">D</label>
+                </td>
+            </tr>
+        </table>
+       <table class="HorizontalAlignmentCenter">
+            <tr>
+                <td>
+                    <p>All Card Number:</p>
+                    <label ID="ATAllCardNumber" runat="server" style="margin:10px;">01234567</label>
+                </td>
+                <td>
+                    <p>Year:</p>
+                    <label id="ATYear" runat="server" style="margin:10px;">Senior</label>
+                </td>
+            </tr>
+       </table>
+       <table class="HorizontalAlignmentCenter">
+           <tr>
+               <td>
+                   <p>Qualifications:</p>
+                   <table>
+                       <tr><td>Classics</td></tr>
+                       <tr><td>Business Management</td></tr>
+                       <tr><td>Biology</td></tr>
+                       <tr><td>Computer Science</td></tr>
+                   </table>
+               </td>
+               <td>
+                   <p>Available Times:</p>
+                   <table>
+                       <tr><td>8:30am-12:20pm</td></tr>
+                       <tr><td>4:30pm-6:30pm</td></tr>
+                   </table>
+               </td>
+           </tr>
+       </table>
+        <table class="HorizontalAlignmentCenter">
+            <tr>
+                <td>
+                    <p>Current Clients</p>
+                    <table>
+                        <tr><td>Corey Sadosky</td></tr>
+                        <tr><td>Nick Pranger</td></tr>
+                        <tr><td>Chandler Wenninger</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="HorizontalAlignmentCenter">
+            <tr>
+                <td>
+                    <button id="btnNCEditTutor" runat="server">Edit Tutor</button>
+                </td>
+                <td>
+                    <button id="btnNCExit" runat="server">Exit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="divNewClientDisplay" class="ContentPanelCenter" style="visibility:collapse;">
+        <div style="text-align:left;">
+            <table class="HorizontalAlignmentCenter">
+                <tr>
+                    <td>
+                        <p>First Name:</p>
+                        <label ID="NCfirstName" runat="server" style="margin:10px;">John</label>
+                    </td>
+                    <td>
+                        <p> Last Name:</p>
+                        <label ID="NClastName" runat="server" style="margin:10px;">Smith</label>
+                    </td>
+                    <td>
+                        <p> MI:</p>
+                        <label ID="NCMiddleInitial" runat="server" style="margin:10px;">D</label>
+                    </td>
+                </tr>
+            </table>
+            <table class="HorizontalAlignmentCenter">
+                <tr>
+                    <td>
+                        <p>All Card Number:</p>
+                        <label ID="AllCardNumber" runat="server" style="margin:10px;">01234567</label>
+                    </td>
+                    <td>
+                        <p>Year:</p>
+                        <label ID="year" runat="server" style="margin:10px;">Senior</label>
+                    </td>
+                </tr>
+            </table>
+            <table class="HorizontalAlignmentCenter">
+                <tr>
+                    <td>
+                        <p>Tutor Requested For:</p>
+                        <label ID="RequestedFor" runat="server" style="margin:10px;">CLAS 121</label>
+                    </td>
+                    <td>
+                        <p>Available Times:</p>
+                        <label ID="times" runat="server" style="margin:10px;">9:30am-12:20pm</label>
+                    </td>
+                </tr>
+            </table>
+            <table class="HorizontalAlignmentCenter">
+                <tr>
+                    <td>
+                    <p>Tutor Suggestions:</p>
+                    <fieldset ID="dropDownList1" runat="server" style="Width:250px">
+                        <legend />
+                        <select id="TutorList" name="TutorList" style="Width:250px">
+                        <option value="0" selected="selected">Please Select a Tutor</option>
+                        <option value="1">Tutor 1</option>
+                        <option value="2">Tutor 2</option>
+                        <option value="3">Tutor 3</option>
+                        </select>
+                    </fieldset>
+                    </td>
+                </tr>
+            </table>
+            <table class="HorizontalAlignmentCenter">
+                <tr>
+                    <td>
+                        <Button ID="submit" runat="server">Submit</Button>
+                    </td>
+                    <td>
+                        <Button ID="cancel" runat="server">Cancel</Button>
+                    </td>
+                </tr>
+            </table>    
+        </div>
+    </div>
+    <div id="divActiveClientDisplay" class="ContentPanelCenter" style="text-align:left; margin-top:-900px; visibility:collapse">
+        <table class="HorizontalAlignmentCenter">
+            <tr>
+                <td>
+                    <p>First Name:</p>
+                    <label ID="ACfirstName" runat="server" style="margin:10px;">John</label>
+                </td>
+                <td>
+                    <p>Last Name:</p>
+                    <label ID="ACLastName" runat="server" style="margin:10px;">Smith</label>
+                </td>
+                <td>
+                    <p>MI:</p>
+                    <label ID="ACMiddleInitial" runat="server" style="margin:10px;">D</label>
+                </td>
+            </tr>
+        </table>
+       <table class="HorizontalAlignmentCenter">
+            <tr>
+                <td>
+                    <p>All Card Number:</p>
+                    <label ID="ACAllCardNumber" runat="server" style="margin:10px;">01234567</label>
+                </td>
+                <td>
+                    <p>Year:</p>
+                    <label id="ACYear" runat="server" style="margin:10px;">Senior</label>
+                </td>
+            </tr>
+       </table>
+       <h5>Active Tutoring Sessions:</h5>
+       <table class="HorizontalAlignmentCenter" style="margin-top:-15px; margin-bottom:30px;">
+           <tr>
+               <td style="text-align:center"><h6>Class</h6></td>
+               <td style="text-align:center"><h6>Time</h6></td>
+               <td style="text-align:center"><h6>Tutor</h6></td>
+           </tr>
+           <tr>
+               <td>CLAS 121</td>
+               <td>8:30am-9:20am</td>
+               <td>Nick Pranger</td>
+           </tr>
+           <tr>
+               <td>LATN 301</td>
+               <td>9:30am-10:20am</td>
+               <td>Corey Sadosky</td>
+           </tr>
+           <tr>
+               <td>GREK 121</td>
+               <td>10:30am-11:20am</td>
+               <td>Corey Sadosky</td>
+           </tr>
+       </table>
+        <table class="HorizontalAlignmentCenter">
+            <tr>
+                <td>
+                    <Button ID="btnACAddSession" runat ="server">Add a Session</Button>
+                </td>
+                <td>
+                    <Button ID="btnACSaveandExit" runat ="server">Save & Exit</Button>
+                </td>
+                <td>
+                    <Button ID="btnACCancel" runat ="server">Cancel</Button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
 
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>
+</div>
